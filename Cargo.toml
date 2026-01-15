@@ -1,0 +1,21 @@
+[package]
+name = "rustler_logger"
+version = "0.4.2"
+edition = "2024"
+description = "log from Rustler NIFs to Elixir's Logger"
+documentation = "https://docs.rs/rustler_logger"
+readme = "README.md"
+homepage = "https://github.com/jvantuyl/rustler_logger"
+repository = "https://github.com/jvantuyl/rustler_logger"
+license = "MIT OR Apache-2.0"
+keywords = ["logging", "rustler", "elixir"]
+categories = ["development-tools::debugging"]
+
+[dependencies]
+rustler = { version = "0.37.1", features = ["derive"] }
+rustler_logger_macro = { version = "0.4.2", path = "../rustler_logger_macro" }
+scoped_thread_local = "1.0.0"
+
+[features]
+# because https://github.com/rust-lang/rust/issues/67295
+testing = []
